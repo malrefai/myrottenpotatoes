@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
   end
 
   def edit
-    @movie = Movie.find param[:id]
+    @movie = Movie.find params[:id]
     # will render app/views/movies/edit.html.haml
   end
 
