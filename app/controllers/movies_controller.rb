@@ -4,10 +4,6 @@ class MoviesController < ApplicationController
     params.require(:movie).permit(:title, :rating, :description, :release_date)
   end
 
-  def index
-    @movies = Movie.all
-  end
-
   def new
     #default: render 'new' template
   end
@@ -22,6 +18,10 @@ class MoviesController < ApplicationController
     end
   end
 
+  def index
+    @movies = Movie.all
+  end
+
   def show
     id = params[:id] # retrieve movie ID from URI route
     @movie = Movie.find(id) # look up movie by unique ID
@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
   end
 
   def edit
-
+    render 'edit'
   end
 
   def update
