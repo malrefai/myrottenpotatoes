@@ -1,8 +1,25 @@
-
 class MoviesController < ApplicationController
+
+  def movie_params
+    params.require(:movie).permit(:title, :rating, :description, :release_date)
+  end
 
   def index
     @movies = Movie.all
+  end
+
+  def new
+    #default: render 'new' template
+  end
+
+  def create
+    @movie = Movie.new(movie_params)
+    if @movie.save
+      flash[:notice] = "#{@movie.title} was successfully created."
+      redirect_to movies_path
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -11,7 +28,16 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.html.haml by default
   end
 
-  def new
-    #default: render 'new' template
+  def edit
+
   end
+
+  def update
+
+  end
+
+  def delete
+
+  end
+
 end
