@@ -4,10 +4,13 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# macOS template
-*.DS_Store
+# jetBrains template
 /.idea
-/ghostdriver.log
+
+# macOS template
+.DS_Store
+/.DS_Store
+*.DS_Store
 
 # Ignore bundler config.
 /.bundle
