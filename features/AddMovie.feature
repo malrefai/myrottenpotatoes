@@ -1,6 +1,11 @@
 Feature: User can manually add movie
 
+  As a movie fan
+  I want to add a movie to Rotten Potatoes database
+  So that I can share a movie with other movie fans
+
   Scenario: Add a movie
+
     Given I am on the RottenPotatoes home page
     When I follow "Add new movie"
     Then I should be on the Create New Movie page
