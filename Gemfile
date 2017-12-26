@@ -67,6 +67,8 @@ group :test do
   gem 'capybara'
   # A useful debugging aid for user stories
   gem 'launchy'
+  # Rspec
+  gem 'rspec-rails'
 end
 
 
