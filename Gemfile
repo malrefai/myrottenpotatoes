@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 # use Haml for templates
 gem 'haml-rails'
 
+# Use The movie Database
+gem 'themoviedb'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
