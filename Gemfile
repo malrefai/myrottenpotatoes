@@ -48,6 +48,12 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Rspec
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'rails-controller-testing'
+  #ZenTest
+  gem 'ZenTest'
 end
 
 group :development do
@@ -67,8 +73,8 @@ group :test do
   gem 'capybara'
   # A useful debugging aid for user stories
   gem 'launchy'
-  # Rspec
-  gem 'rspec-rails'
+  # Rspec expectations
+  gem 'rspec-expectations'
 end
 
 
