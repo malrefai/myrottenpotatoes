@@ -75,6 +75,8 @@ group :test do
   gem 'launchy'
   # Rspec expectations
   gem 'rspec-expectations'
+  # ٍSimpleCov
+  gem 'simplecov', require: false
 end
 
 

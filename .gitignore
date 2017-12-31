@@ -19,7 +19,8 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-# Ignore all logfiles and tempfiles.
+# Ignore all logfiles, coveragefiles and tempfiles.
+/coverage/*
 /log/*
 /tmp/*
 !/log/.keep

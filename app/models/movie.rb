@@ -4,10 +4,14 @@ class Movie < ApplicationRecord
     %w(G PG PG-13 NC-17 R NR)
   end
 
+  def name_with_rating
+    "#{self.title} (#{self.rating})"
+  end
+
   validates :title, presence: true
   validates :release_date, presence: true
   validates :rating, inclusion: {in: self.all_ratings}
-  validate :released_1930_or_later
+  # validate :released_1930_or_later
   before_save :capitalize_title
 
   def released_1930_or_later
@@ -37,6 +41,7 @@ class Movie < ApplicationRecord
 
   def self.find_in_tmdb(string)
     begin
+      return [] if string.eql? ''
       unless Tmdb::Movie.find(string).nil?
         moviesList = []
         movieRating = nil
